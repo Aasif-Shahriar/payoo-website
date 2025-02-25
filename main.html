@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
@@ -27,7 +25,7 @@
     </style>
   </head>
   <body class="bg-slate-800 font-outfit">
-    <section class="max-w-md min-h-screen mx-auto px-6 bg-gray-200">
+    <section class="max-w-md min-h-screen mx-auto px-6 bg-gray-200 text-black">
       <header>
         <nav
           class="flex justify-between items-center py-3 border-b border-[#0808081A]"
@@ -36,7 +34,7 @@
           <div class="flex items-center gap-2">
             <img class="h-12" src="assets/login-form/Group (1).png" alt="" />
             <div>
-              <h3 class="font-extrabold text-lg">$45000</h3>
+              <h3 class="font-extrabold text-lg">$<span id="balance">45000</span></h3>
               <p class="text-sm">Available Balance</p>
             </div>
           </div>
@@ -52,10 +50,10 @@
         </nav>
 
         <!-- header text content -->
-        <section class="py-8 space-y-3">
+        <section class="py-8 space-y-3 text-black">
           <h2 class="text-2xl font-extrabold">🔥 Welcome to Payooo!</h2>
           <p class="text-gray-500">
-            Enjoy easy and convenient financial services with us. Cashout charge
+            Enjoy easy and convenient financial services with us. Cash out charge
             is low and
           </p>
 
@@ -112,7 +110,7 @@
           <!-- add money form -->
           <div class="">
             <div class="hero-content flex-col lg:flex-row-reverse">
-              <div class="card bg-base-100 w-full max-w-sm shrink-0">
+              <div class="card bg-base-100 w-full max-w-sm shrink-0 bg-white text-black">
                 <form class="card-body">
                   <legend class="font-bold">Select A Bank</legend>
                   <select class="select w-full max-w-xs bg-[#F4F5F7]">
@@ -123,13 +121,14 @@
                     <option class="Upay">Upay</option>
                   </select>
                   <!-- input 1 -->
-                  <div class="form-control">
+                  <div class="form-control ">
                     <label class="label">
-                      <span class="label-text font-bold"
+                      <span class="label-text font-bold text-black"
                         >Bank Account Number</span
                       >
                     </label>
                     <input
+                    value="01868381701"
                       type="number"
                       placeholder="Enter 11 digit account number"
                       class="input input-bordered bg-[#F4F5F7]"
@@ -139,9 +138,10 @@
                   <!-- input 2 -->
                   <div class="form-control">
                     <label class="label">
-                      <span class="label-text font-bold">Amount to Add</span>
+                      <span  class="label-text font-bold text-black">Amount to Add</span>
                     </label>
                     <input
+                    id="amount"
                       type="number"
                       placeholder="Add Amount to withdraw"
                       class="input input-bordered bg-[#F4F5F7]"
@@ -151,9 +151,10 @@
                   <!-- input 3 -->
                   <div class="form-control">
                     <label class="label">
-                      <span class="label-text font-bold">Pin Number</span>
+                      <span class="label-text font-bold text-black">Pin Number</span>
                     </label>
                     <input
+                    id="pin"
                       type="password"
                       placeholder="Enter 4 digit pin number"
                       class="input input-bordered bg-[#F4F5F7]"
@@ -162,7 +163,7 @@
                   </div>
                   <!-- button -->
                   <div class="form-control mt-6">
-                    <button class="btn btn-primary">Add Money</button>
+                    <button id="add-money" class="btn btn-primary">Add Money</button>
                   </div>
                 </form>
               </div>
@@ -171,5 +172,9 @@
         </section>
       </header>
     </section>
+
+
+    <script src="js/add-money.js"></script>
   </body>
 </html>
+
