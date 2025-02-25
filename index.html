@@ -6,13 +6,50 @@
     <title>Payoo - Web</title>
     <!-- css file linked -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- DaisyUi + Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>    
 </head>
-<body>
+<body class="bg-slate-800">
     
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+        <header class="">
+            <nav class="flex justify-center items-center mt-48">
+                <div class="relative flex justify-center items-center mb-10 mt-10 w-9/12">
+                    <img class="absolute w-60" src="assets/login-form/Rectangle 1.png" alt="">
+                    <img class="w-16 -mt-28" src="assets/login-form/Group (1).png" alt="">
+                </div>
+            </nav>
+        </header>
+
+        <!-- login form -->
+        <div class="">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+              <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text font-bold">Mobile Number</span>
+                    </label>
+                    <input value="01868381701" id="account-number" type="number" placeholder="Enter your number" class="input input-bordered" required />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text font-bold">PIN</span>
+                    </label>
+                    <input value="1234" id="pin" type="text" placeholder="Enter 4 Digit Pin" class="input input-bordered" required />
+                  </div>
+                  <div class="form-control mt-6">
+                    <button id="login-btn" class="btn btn-primary bg-black">Login</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+    </section>
 
 
-
-
-    <script src="js/index.js"></script>
+    <!-- JS File -->
+     <script src="js/login.js"></script>
 </body>
 </html>
