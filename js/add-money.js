@@ -1,4 +1,4 @@
-const addMoney = document.getElementById('add-money')
+const addMoney = document.getElementById('add-money-btn')
 
 addMoney.addEventListener('click', (event) => {
     event.preventDefault();
@@ -9,11 +9,16 @@ addMoney.addEventListener('click', (event) => {
     const balance = document.getElementById('balance').innerText;
     const convertedBalance = parseFloat(balance);
 
-    if (convertedPin === 1234) {
+    if (amountEl && pin) {
+       if(convertedPin === 1234){
         let sum = convertedAmount + convertedBalance;
         document.getElementById('balance').innerText = sum;
+       }
+       else{
+        alert('Enter valid pin')
+       }
     }
     else{
-        alert('you can not enter')
+        alert('Enter amount')
     }
 })
