@@ -6,7 +6,7 @@ btnEl.addEventListener("click", (event) => {
   const convertedPinNum = parseInt(pinNum)
   if(accNum.length === 11){
     if(convertedPinNum === 1234){
-       window.location.href = './index2.html'
+       window.location.href = 'main.html'
     }
     else{
         alert('Invalid PIN number');
