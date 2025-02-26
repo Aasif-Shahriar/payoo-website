@@ -98,6 +98,7 @@
             </div>
             <!-- card no - 6 -->
             <div
+            id="transaction-box"
               class="border border-[#0808081A] rounded-lg py-3 px-5 flex flex-col gap-2 justify-center items-center hover:border-green-500 transition cursor-pointer"
             >
               <img src="assets/icons/transaction 1.png" alt="" />
@@ -131,6 +132,7 @@
                       >
                     </label>
                     <input
+                    id="accNum"
                     value="01868381701"
                       type="number"
                       placeholder="Enter 11 digit account number"
@@ -145,6 +147,7 @@
                     </label>
                     <input
                     id="amount"
+                    value="100"
                       type="number"
                       placeholder="Add Amount to add"
                       class="input input-bordered bg-[#F4F5F7]"
@@ -158,6 +161,7 @@
                     </label>
                     <input
                     id="pin"
+                    value="1234"
                       type="password"
                       placeholder="Enter 4 digit pin number"
                       class="input input-bordered bg-[#F4F5F7]"
@@ -174,7 +178,7 @@
           </div>
         </section>
 
-        <!-- Cash Our section -->
+        <!-- Cash Out section -->
          <section id="cash-out">
             <h2 class="text-xl font-bold">Cash Out</h2>
             <div class="">
@@ -189,6 +193,7 @@
                           >
                         </label>
                         <input
+                        id="cashout-acc"
                         value="01868381701"
                           type="number"
                           placeholder="Enter 11 digit account number"
@@ -203,6 +208,7 @@
                         </label>
                         <input
                         id="cashout-amount"
+                        value="1000"
                           type="number"
                           placeholder="Add Amount to add"
                           class="input input-bordered bg-[#F4F5F7]"
@@ -232,13 +238,24 @@
                 </div>
               </div>
          </section>
+        
+         <!-- Transaction section -->
+          <section id="transaction-history">
+            <h2 class="text-xl font-bold">Transaction History</h2>
+
+            <div id="transaction-container">
+
+            </div>
+          </section>
       </header>
     </section>
 
-
-    <script src="js/add-money.js"></script>
-    <script src="js/toggle.js"></script>
+    <script src="utilities/utilities.js"></script>
+    <script src="js/addMoney.js"></script>
+    <!-- <script src="js/add-money.js"></script> -->
+    <script src="./utilities/toggle.js"></script>
     <script src="js/cash-out.js"></script>
+    <script src="js/transaction.js"></script>
   </body>
 </html>
 
