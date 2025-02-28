@@ -24,7 +24,8 @@ document.getElementById('add-money-btn').addEventListener('click', function (eve
             
             const div = document.createElement('div');
             div.classList.add('bg-green-300');
-            div.classList.add('p-4')
+            div.classList.add('p-4');
+            div.classList.add('mb-2')
             div.innerHTML = `
             <h1>Added money from ${bankList} </h1>
             <h3>$${amount}</h3>

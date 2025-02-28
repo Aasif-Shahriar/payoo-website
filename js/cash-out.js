@@ -21,6 +21,7 @@ document.getElementById('withdraw-btn').addEventListener('click', (event) => {
             p.classList.add('bg-red-400');
             p.classList.add('px-3');
             p.classList.add('pb-3');
+            p.classList.add('mb-2');
             p.innerText = `
             Cash out $${amount} from ${cashoutAcc};
             `;
