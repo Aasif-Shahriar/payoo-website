@@ -18,6 +18,9 @@ document.getElementById('withdraw-btn').addEventListener('click', (event) => {
 
             const transactionContainer = document.getElementById('transaction-container');
             const p = document.createElement('p');
+            p.classList.add('bg-red-400');
+            p.classList.add('px-3');
+            p.classList.add('pb-3');
             p.innerText = `
             Cash out $${amount} from ${cashoutAcc};
             `;

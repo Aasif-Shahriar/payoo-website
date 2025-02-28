@@ -23,10 +23,11 @@ document.getElementById('add-money-btn').addEventListener('click', function (eve
             const transactionContainer = document.getElementById('transaction-container');
             
             const div = document.createElement('div');
-            div.classList.add('bg-yellow-100')
+            div.classList.add('bg-green-300');
+            div.classList.add('p-4')
             div.innerHTML = `
             <h1>Added money from ${bankList} </h1>
-            <h3>${amount}</h3>
+            <h3>$${amount}</h3>
             <p>Account number: ${accNum}
             `;
 
