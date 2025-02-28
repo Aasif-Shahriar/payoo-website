@@ -14,12 +14,8 @@ document.getElementById('add-money-btn').addEventListener('click', (event) => {
             let sum = convertedAmount + convertedBalance;
             document.getElementById('balance').innerText = sum;
 
-
-
             const p = document.createElement('p');
-            p.innerText = `
-            added ${amount} from ${accNum}
-            `
+            p.innerText = ` added ${amount} from ${accNum}`;
 
             console.log(p)
        }

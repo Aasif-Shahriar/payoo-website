@@ -5,10 +5,24 @@ document.getElementById('withdraw-btn').addEventListener('click', (event) => {
     const pin = getInputValueById('cashout-pin');
     const balance = getInnerTextById('balance');
 
+     //negative number atkanor upay
+     if(amount > balance){
+        alert('Insufficient Balance')
+        return;
+    }
+
     if(cashoutAcc.length === 11){
         if(pin === 1234){
             const sum = balance - amount;
-            setInnerText("balance", sum)
+            setInnerText("balance", sum);
+
+            const transactionContainer = document.getElementById('transaction-container');
+            const p = document.createElement('p');
+            p.innerText = `
+            Cash out $${amount} from ${cashoutAcc};
+            `;
+
+            transactionContainer.appendChild(p)
         }else{
             alert('Invalid PIN')
         }
